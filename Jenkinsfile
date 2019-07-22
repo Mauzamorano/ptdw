@@ -15,7 +15,8 @@ pipeline{
 		
 		stage ('Prueba Docker'){
 			steps{
-				sh 'sudo docker build --tag=php54 .'
+				sh 'sudo docker-compose down'
+				sh 'sudo docker-compose up -d'
 			}
 		}
 	}
